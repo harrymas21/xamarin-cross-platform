@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="izCarbo.CustomerRegistrationPage">
+    <ContentPage.Content>
+        
+            <StackLayout BackgroundColor="AliceBlue">
+
+                <TableView Intent="Form" Margin="10, 0">
+                    <TableRoot>
+                        <TableSection>
+                            <EntryCell Label="Fullname" Placeholder = "Type text here" />
+                            <EntryCell Label="Mobile Number" Placeholder = "Type number here(+254)" />
+                            <EntryCell Label="Email" Placeholder = "Type text here" />
+                            <EntryCell Label="Address" Placeholder = "Type text here" />
+                            <EntryCell Label="Employer" Placeholder = "Type text here" />
+                            <EntryCell Label="Next Of Kin" Placeholder = "Type text here" />
+                            <EntryCell Label="Date Of Birth" Placeholder = "Type text here" />
+                            <SwitchCell Text="Create Default Accounts" />
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+
+                <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" IsVisible="{Binding IsBusy, Mode=TwoWay}" />
+
+                <Button Text="Register" HorizontalOptions="Center" Command="{Binding SaveCommand}" />
+
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
